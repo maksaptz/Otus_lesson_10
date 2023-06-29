@@ -9,7 +9,7 @@ do
 
 	### Выводим PID
         echo "PID: " $y
-	### Проанализирова католог /proc выводим тип TTY
+	### Проанализировав католог /proc выводим тип TTY
         echo -n "TTY: "; stat /proc/$y/fd/0 | grep /dev | sed 's|.*> ||'
 	### Состояние процесса 
 	awk '{print "STAT: " $3}' /proc/$y/stat
